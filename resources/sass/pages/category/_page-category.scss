@@ -1,0 +1,48 @@
+.page-category {
+  &__title {
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: -1.52px;
+    font-weight: 700;
+    margin-bottom: 22px;
+
+    @include media(sm) {
+      font-size: 33px;
+      margin-bottom: 15px;
+    }
+
+    @include media(sm2) {
+      font-size: 28px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    margin-bottom: 43px;
+    @include double-font;
+
+    @include media(sm2) {
+      display: none;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns:  1fr 363px;
+    gap: 22px;
+
+    @include media(sm) {
+      grid-template-columns: 1fr;
+      gap: unset;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

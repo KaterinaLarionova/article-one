@@ -1,0 +1,21 @@
+.feature {
+  position: relative;
+  //margin-top: 0;
+  margin-bottom: 24px;
+  margin-top: 20px;
+  min-height: 570px;
+  border-radius: 24px;
+
+  &__main {
+    position: relative;
+    min-height: 570px;
+    color: #fff;
+    //padding: 28px 0 0 0;
+    //padding-right: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+}

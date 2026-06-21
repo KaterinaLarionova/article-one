@@ -1,0 +1,34 @@
+//defaults
+@use "sass:math";
+$grid-columns: 12;
+$grid-gap: 1em;
+
+// adds negative margins
+@mixin negative-margins($gap) {
+  margin-left: math.div(-$gap, 2);
+  margin-right: math.div(-$gap, 2);
+}
+
+@mixin flex-grid($gap-h:$grid-gap, $gap-v:$gap-h) {
+  margin: 0 #{-$gap-h/2};
+  display: flex;
+  flex-wrap:wrap;
+  @include clear;
+
+  > *{
+    float:left; //fallback
+    padding: 0 $gap-h/2 $gap-v $gap-h/2;
+  }
+}
+
+@mixin calc-cell($width, $gap-h:0, $gap-v:$gap-h) {
+  float: left;
+  @if $gap-h == 0 or $gap-h == 0px  {
+    width: $width;
+  }
+  @else {
+    width: calc(#{$width} - #{$gap-h});
+    margin: 0 $gap-h/2 $gap-v $gap-h/2;
+  }
+}
+

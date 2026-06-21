@@ -1,0 +1,126 @@
+.home-categories {
+  background-color: #819599;
+  margin-top: 52px;
+  margin-bottom: 72px;
+  padding: 25px 0 25px 0;
+
+  @include media(sm2) {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  @include media(xs) {
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+
+  @include media(800px) {
+    display: none;
+  }
+
+  &__title {
+    font-size: 26px;
+    text-wrap: balance;
+    color: #FFD204;
+    max-width: 368px;
+    text-transform: uppercase;
+    line-height: 1.3;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    align-content: center;
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  &__separator {
+    max-width: 40%;
+  }
+
+  &__wrap {
+    overflow: inherit!important;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include negative-margins(24px);
+  }
+
+
+  &__card {
+    margin: 0 12px;
+    position: relative;
+    height: 100%;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__inner-wrap {
+    position: relative;
+  }
+
+  &__img {
+    aspect-ratio: 1.75/1;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__body {
+    position: absolute;
+    bottom: 50px;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    padding: 40px;
+
+    @include media(sm2) {
+      bottom: 40px;
+    }
+  }
+
+  &__category {
+    display: block;
+    //@include font-accent;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: $font-weight-regular;
+    line-height: 1.5;
+
+    img {
+      clip-path: circle();
+      max-width: 115px;
+    }
+
+    @include media(sm2) {
+      font-size: 25px;
+    }
+  }
+}
+
+@include media(1100px) {
+  .home-categories__wrap {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    max-height: 150px;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .home-categories__wrap > article.home-categories__category {
+    flex: 0 0 auto;
+  }
+}

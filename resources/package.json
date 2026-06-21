@@ -1,0 +1,31 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "siema": "^1.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "autoprefixer": "^9.7.0",
+    "babel-loader": "^8.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3",
+    "sass": "^1.47.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "scripts": {
+    "compile-sass": "sass --no-source-map --style=compressed ./sass/:./../assets/css/",
+    "postcss": "postcss --replace --no-map ../assets/css/**/*.css --use autoprefixer",
+    "build:css": "npm run compile-sass && npm run postcss",
+    "build:js": "webpack-cli --config webpack.config.js",
+    "build": "npm-run-all --parallel build:*",
+    "watch:css": "sass --watch --embed-source-map ./sass/:./../assets/css/",
+    "watch:js": "webpack-cli --watch --mode development --config webpack.config.js",
+    "watch": "npm-run-all --parallel watch:*"
+  },
+  "author": "",
+  "license": "ISC"
+}

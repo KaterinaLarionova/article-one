@@ -1,0 +1,59 @@
+$font-dir: "#{$assets}/fonts";
+
+//@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+//@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin accent-font {
+  font-family: 'Google Sans Flex', sans-serif;
+}
+
+@mixin double-font {
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$font-dir}/icomoon/icomoon.eot?j81xpa');
+  src:  url('#{$font-dir}/icomoon/icomoon.eot?j81xpa#iefix') format('embedded-opentype'),
+  url('#{$font-dir}/icomoon/icomoon.ttf?j81xpa') format('truetype'),
+  url('#{$font-dir}/icomoon/icomoon.woff?j81xpa') format('woff'),
+  url('#{$font-dir}/icomoon/icomoon.svg?j81xpa#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('#{$font-dir}/font/Google-Sans-Flex.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('#{$font-dir}/font/Inter.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+@mixin font-icons {
+  font-family: "icomoon", serif;
+}
+
+@mixin font-web {
+  font-family: "Inter", sans-serif;
+}
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;

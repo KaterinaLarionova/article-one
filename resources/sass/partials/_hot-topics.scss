@@ -1,0 +1,34 @@
+.hot-topics {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  //gap: 22px;
+  //margin-bottom: 50px;
+
+  @include media(855px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    //margin-bottom: 30px;
+  }
+
+  &__main {
+    @include flex-direction( $direction:column);
+    gap: 15px;
+
+    @include media(sm2) {
+      flex-wrap: nowrap;
+      gap: 12px;
+    }
+  }
+
+  & .article-over {
+    & .post-card__image {
+      aspect-ratio: (1,0.7);
+
+      @include media(sm2) {
+        aspect-ratio: (0.9,0.6);
+      }
+    }
+  }
+}

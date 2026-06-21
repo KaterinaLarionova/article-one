@@ -1,0 +1,51 @@
+.category-item {
+  position: relative;
+  height: 64px;
+  //border-radius: var(--radius-md);
+  overflow: hidden;
+  //box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 25px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: $card-gradient;
+            //linear-gradient(to top, rgba(70, 28, 96, 0.78) 0%, rgba(120, 46, 120, 0.3) 40%, rgba(255, 255, 255, 0) 66%);
+            //linear-gradient(to top, rgba(70, 28, 96, 0.78) 0%, rgba(120, 46, 120, 0.3) 40%, rgba(255, 255, 255, 0) 66%);
+            //linear-gradient(to top, rgba(24, 40, 96, 0.78) 0%, rgba(34, 70, 128, 0.3) 40%, rgba(255, 255, 255, 0) 66%);
+            //linear-gradient(90deg, rgba(150, 236, 212, 0.2) 0%, rgba(16, 15, 15, 0.91) 89%, rgba(16, 15, 15, 0.93) 93%);
+  //radial-gradient(700px 420px at 12% 0%, rgba(150, 236, 212, 0.1), rgba(150, 236, 212, 0) 60%), radial-gradient(700px 460px at 92% 100%, rgba(120, 170, 255, 0.1), rgba(120, 170, 255, 0) 60%), linear-gradient(120deg, rgb(191, 240, 228) 0%, rgb(207, 230, 255) 52%, rgb(220, 210, 251) 100%);
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &::before {
+      padding: 80% 0 0 0;
+    }
+  }
+
+  img {
+    position: absolute;
+    display: block;
+    max-width: 100%;
+  }
+
+  &__meta {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    padding: 0 20px;
+    text-transform: capitalize;
+    color: #fff;
+  }
+}

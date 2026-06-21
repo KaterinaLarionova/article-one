@@ -1,0 +1,42 @@
+.rating-stars{
+
+  $rating-color-active: $color-star;
+  $rating-color-inactive: gray(2);
+  $rating-star: $icon-star;
+
+  color: $rating-color-inactive;
+  @include font-icons;
+  display: inline-block;
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  white-space: nowrap;
+  position: relative;
+
+  &:before {
+    color: $rating-color-inactive;
+    content:"#{$rating-star}#{$rating-star}#{$rating-star}#{$rating-star}#{$rating-star}";
+  }
+
+
+  &:after {
+    color: $rating-color-active;
+    content:"#{$rating-star}#{$rating-star}#{$rating-star}#{$rating-star}#{$rating-star}";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top:0;
+    overflow: hidden;
+    width: 0;
+  }
+
+  @for $i from 0 through 10{
+    &[data-value="#{$i * 0.5}"]{
+      &:after{
+        width: #{$i * 10%};
+      }
+    }
+  }
+
+}//rating-stars
+

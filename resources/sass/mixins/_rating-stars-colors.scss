@@ -1,0 +1,11 @@
+@mixin rating-stars-colors($rating-color-active, $rating-color-inactive ) {
+
+  &:before{
+    color: $rating-color-inactive;
+  }
+
+  &:after{
+    color: $rating-color-active;
+  }
+}
+

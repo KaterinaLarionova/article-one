@@ -1,0 +1,123 @@
+.hotspots {
+  margin-bottom: 1em;
+}
+
+a.hotspot{
+  font-size: 14px;
+  color: #000000;
+  text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+  padding-left: 14px;
+  text-decoration: none;
+  margin: 0 0.25em 0.5em 0;
+  break-inside: avoid;
+  column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  &:hover{
+  }
+
+  &:before{
+    content: $icon-chevrons-right;
+    @include font-icons();
+    font-size: 10px;
+    line-height: 20px;
+    display: inline-block;
+    position: absolute;
+    left:0;
+    top:0;
+  }
+
+
+}
+
+a.hotspot--btn{
+
+  $base-class: &;
+  $marker-size: 23px;
+
+  font-size: 14px;
+  text-transform: capitalize;
+  position: relative;
+  text-decoration: none;
+  text-align: left;
+  padding: 0.75em;
+  display: flex;
+  align-items:center;
+
+  &:hover{
+    text-decoration: underline;
+  }
+
+  @include media(sm){
+    font-size: 13px;
+  }
+
+  @include media(xs){
+    font-size: 12px;
+  }
+
+  //marker
+  &:before{
+    @include font-icons();
+    color: #fff;
+    font-size: 8px;
+    font-weight: bold;
+    content: $icon-chevrons-right;
+    text-align: center;
+    display: block;
+    width: $marker-size;
+    height: $marker-size;
+    line-height: $marker-size;
+    border-radius: $marker-size;
+    float: left;
+    margin-right: 1em;
+    flex-shrink:0;
+  }
+
+  .hotspots--sidebar &{
+    margin-bottom: 0.5em;
+  }
+
+}//hotspot--btn
+
+.hotspots__heading {
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+.hotspots__layout {
+  $gap: 8px;
+  display: flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  @include negative-margins($gap);
+
+  .hotspot--btn{
+    @include calc-cell(25%, $gap);
+
+    @include media(sm2){
+      @include calc-cell(50%, $gap);
+    }
+  }//btn
+}
+
+
+.hotspots__layout--3col {
+  $gap: 8px;
+  display: flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  @include negative-margins($gap);
+
+  .hotspot--btn{
+    @include calc-cell(33.33%, $gap);
+
+    @include media(sm2){
+      @include calc-cell(50%, $gap);
+    }
+  }
+}
+

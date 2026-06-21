@@ -1,0 +1,70 @@
+.accordion {
+  &__item {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EBEDF0;
+  }
+
+  &__heading {
+    @include accent-font();
+    color: #242A34;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    padding: 18px 0;
+
+    @include media(xs) {
+      font-size: 14px;
+      padding: 14px 0;
+    }
+
+    &::after {
+      @include font-icons();
+      //content: $icon-add;
+      float: right;
+      transition: all .35s;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #000000;
+      margin-left: 10px;
+    }
+  }
+
+  &__content {
+    @include accent-font();
+    color: #3C434A;
+    font-size: 14px;
+    line-height: 2;
+    padding-left: 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+
+    @include media(xs) {
+      font-size: 13px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      padding: 0 0 0 2.1em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.active::after {
+  @include font-icons();
+  //content: $icon-delete;
+  float: right;
+  transition: all .35s;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000000;
+}

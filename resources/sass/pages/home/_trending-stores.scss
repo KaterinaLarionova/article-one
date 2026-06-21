@@ -1,0 +1,39 @@
+.trending-stores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+
+  display: -ms-grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 40px 1fr;
+
+  @include media(sm) {
+    grid-gap: 25px;
+
+    -ms-grid-columns: 1fr 25px 1fr;
+  }
+
+  @include media(650px) {
+    grid-template-columns: 1fr;
+
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 25px 1fr;
+  }
+
+  .article-card {
+    &:nth-child(1) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 1;
+    }
+
+    &:nth-child(2) {
+      -ms-grid-column: 3;
+      -ms-grid-row: 1;
+
+      @include media(650px) {
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
+      }
+    }
+  }
+}

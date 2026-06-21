@@ -1,0 +1,134 @@
+.section {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: linear-gradient(88deg, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0.3) 88%);
+  backdrop-filter: blur(24px) saturate(220% - 250%);
+  -webkit-backdrop-filter: blur(24px) saturate(220% - 250%);
+  border: 2px solid rgba(255, 255, 255, .3);
+
+
+
+
+
+  //border: 1px solid rgba(26, 26, 30, 0.10);
+//background: linear-gradient(100deg, rgba(255, 255, 255, 0.3) 2%, rgba(255, 255, 255, 0.3) 88%);
+  //border: 1px solid rgba(255, 255, 255, .2);
+  //background-color: rgb(255, 255, 255);
+  //background: linear-gradient(100deg, rgba(255, 255, 255, 0.3) 2%, rgba(255, 255, 255, 0.3) 88%);
+  //background-color: #f4efef;
+  //backdrop-filter: blur(24px) saturate(1.35);
+  padding: 2.5em;
+  border-radius: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.35) 0%,
+                    rgba(255, 255, 255, 0) 35%
+    );
+
+    pointer-events: none;
+
+  }
+
+  @include media(sm) {
+    margin-bottom: 40px;
+  }
+
+  &__heading {
+    position: relative;
+    width: max-content;
+    font-size: 30px;
+    font-weight: $font-weight-bold;
+    //color: $color-light-title;
+    padding: 0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+
+    @include media(sm2) {
+      font-size: 16px;
+      padding: 4px 14px;
+      border-radius: 2px 2px 0 0;
+      line-height: 1.4;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      max-width: 64px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+                      120deg,
+                      rgb(150, 236, 212) 0%,
+                      rgb(191, 240, 228) 25%,
+                      rgb(120, 170, 255) 80%,
+
+      );
+    }
+  }
+
+  &__posts-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 24px;
+    padding: 0 0 21px 0;
+    background-color: $bg-section;
+    border: 1px solid $color-border;
+
+    @include media(sm2) {
+      grid-template-rows: unset;
+      padding: 21px 21px 30px;
+    }
+
+    &:last-of-type(2n) {
+      @include media(sm2) {
+        gap: 0;
+      }
+    }
+  }
+
+  &__posts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(205px, 342px));
+    gap: 35px;
+
+    @include media(sm) {
+      gap: 25px;
+    }
+    @include media(sm2) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &:last-child {
+      @include media(sm2) {
+        display: none;
+      }
+    }
+  }
+}
+
+.section-center {
+  margin-top: 52px;
+  text-align: center;
+
+  @include media(sm2) {
+    margin-bottom: 52px;
+  }
+
+  @include media(xs) {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}

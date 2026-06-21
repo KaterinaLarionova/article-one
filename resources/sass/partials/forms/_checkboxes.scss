@@ -1,0 +1,127 @@
+input[type="checkbox"],
+input[type="radio"]{
+  margin-right: 0.5em;
+}
+
+// Base for label styling
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  opacity:0;
+  width: 0;
+  height: 0;
+  transform: scale(0);
+  display: block;
+  position: absolute;
+}
+[type="checkbox"]:not(:checked) + span,
+[type="checkbox"]:checked + span,
+[type="radio"]:not(:checked) + span,
+[type="radio"]:checked + span {
+  position: relative;
+  padding-left: 29px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+// Checkbox aspect
+//---------------------------------------------------------------------------
+[type="checkbox"]:not(:checked) + span:before,
+[type="checkbox"]:checked + span:before {
+  content: '';
+  position: absolute;
+  left:0; top: 0;
+  width: 15px; height: 15px;
+  background: #FFFFFF;
+  border: 1px solid gray(0);
+  //box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+}
+
+[type="checkbox"]:checked + span:before {
+  background: white;
+}
+
+
+// checked mark aspect
+[type="checkbox"]:not(:checked) + span:after,
+[type="checkbox"]:checked + span:after {
+  content: '#{$icon-check}';
+  //@include font-icons();
+  position: absolute;
+  font-weight: $font-weight-medium;
+  top: 3px;
+  left: 2px;
+  font-size: 14px;
+  line-height: 0.9;
+  color: #000000;
+  transition: all .2s;
+}
+
+
+// Radio aspect
+//---------------------------------------------------------------------------
+[type="radio"]:not(:checked) + span:before,
+[type="radio"]:checked + span:before {
+  content: '';
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #e1ded8;
+  border-radius: 16px;
+
+}
+
+// checked mark aspect
+[type="radio"]:not(:checked) + span:after,
+[type="radio"]:checked + span:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000000;
+  border-radius: 7px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  line-height: 0.8;
+  transition: all .2s;
+}
+
+
+// Checked mark aspect changes
+//---------------------------------------------------------------------------
+[type="checkbox"]:not(:checked) + span:after,
+[type="radio"]:not(:checked) + span:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + span:after,
+[type="radio"]:checked + span:after {
+  opacity: 1;
+  transform: scale(1);
+}
+// disabled checkbox
+[type="checkbox"]:disabled:not(:checked) + span:before,
+[type="checkbox"]:disabled:checked + span:before,
+[type="radio"]:disabled:not(:checked) + span:before,
+[type="radio"]:disabled:checked + span:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+
+[type="checkbox"]:disabled:checked + span:after,
+[type="radio"]:disabled:checked + span:after {
+  color: #999;
+}
+
+[type="checkbox"]:disabled + span,
+[type="radio"]:disabled + span {
+  color: #aaa;
+}
+

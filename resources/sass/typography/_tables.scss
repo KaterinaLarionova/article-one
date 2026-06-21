@@ -1,0 +1,45 @@
+table{
+margin-bottom: 1em;
+
+  th,
+  td {
+    padding: 0.5em 1em;
+    @include media(xs){
+      padding: 0.5em;
+    }
+  }
+}
+
+table.table-lined{
+  thead th,
+  thead td {
+    font-weight:bold;
+    border-width:2px;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $color-border;
+  }
+
+  th:first-child,
+  td:first-child {
+    padding-left:0;
+    text-align:left;
+  }
+
+}
+
+table.table-bordered{
+  thead th,
+  thead td {
+    font-weight:bold;
+    background:lighten($color-border, 9%);
+  }
+
+  th,
+  td {
+    border: 1px solid $color-border;
+  }
+}
+

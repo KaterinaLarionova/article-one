@@ -1,0 +1,183 @@
+// Button defaults
+//---------------------------------------------------
+$btn-text-color: #fff!default;
+$btn-bg-color: $color-accent-main;
+$btn-hover-text-color: #fff!default;
+$btn-hover-bg-color: #000000!default;
+$btn-font-size: 15px!default;
+$btn-height: 44px!default;
+$btn-border-color: transparent!default;
+$btn-border-radius: 0!default;
+//---------------------------------------------------
+
+@mixin buttons-elements($class){
+  a#{$class},
+  button#{$class},
+  input[type="submit"]#{$class},
+  input[type="button"]#{$class}{
+    @content;
+  }
+}
+
+// Common for all buttons
+%button-common{
+  font-size: $btn-font-size;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  height: $btn-height;
+  line-height: $btn-height;
+  padding: 0 1.75em;
+  white-space:nowrap;
+  border-radius: $btn-border-radius;
+  border: none;
+  cursor: pointer;
+  appearance:none;
+  -webkit-appearance:none;
+}
+
+// Button normal
+//---------------------------------------------------
+@mixin btn--default(
+$color : $btn-text-color, // text color
+$bg : $color-accent-main, // background color
+$hover-color : $btn-hover-text-color, // hover text color
+$hover-bg : $btn-hover-bg-color // hover background color
+){
+  @extend %button-common;
+  color: $color;
+  background:  $bg;
+  font-weight: $font-weight-regular;
+  border-radius: $btn-border-radius;
+  transition: background-color 0.15s;
+
+  &:visited{
+    color: $color;
+  }
+
+  &:hover,
+  &:visited:hover {
+    color: $hover-color!important;
+    background: $hover-bg;
+  }
+}
+
+// Button outlined
+//---------------------------------------------------
+@mixin btn--out(
+$color : #000000, // text color
+$border : $color, // background color
+$hover-color : #fff, // hover text color
+$hover-bg : $color // hover background color
+){
+  @extend %button-common;
+  color: $color;
+  background: transparent;
+  font-weight: normal;
+  border-radius: $btn-border-radius;
+  transition: background-color 0.15s;
+  border: 1px solid $border;
+
+  &:visited{
+    color: $color;
+  }
+
+  &:hover,
+  &:visited:hover{
+    color: $hover-color;
+    background: $hover-bg;
+    border-color: transparent;
+    text-decoration: none;
+  }
+}
+
+// Override buttons size
+//---------------------------------------------------
+@mixin btn--lg{
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 2em;
+}
+
+@mixin btn--sm{
+  font-size: 13px;
+  height: 34px;
+  line-height: 34px;
+}
+
+
+// Normal buttons
+//---------------------------------------------------
+@include buttons-elements('.btn'){
+
+  @include btn--default();
+
+  &.btn--lg{
+    @include btn--lg();
+  }
+
+  &.btn--sm{
+    @include btn--sm();
+  }
+
+  &.btn--rnd{
+    border-radius: 100px;
+  }
+
+  &.btn--c1 {
+    color: #2164BC;
+    background-color: #D1F3FF;
+    border-color: #2164BC;
+    border-radius: 10px;
+
+    &:hover{
+      color: #D1F3FF;
+      border-color: #D1F3FF;
+      background-color: #000000;
+    }
+  }
+}
+
+
+// Outlined buttons
+//---------------------------------------------------
+@include buttons-elements('.btn--out'){
+
+  @include btn--out();
+
+  &.btn--rnd{
+    border-radius: 100px;
+  }
+  &.btn--lg{
+    @include btn--lg();
+  }
+
+  &.btn--sm{
+    @include btn--sm();
+  }
+
+  &.btn--c1{
+    color: #FFFFFF;
+    background-color: #000000;
+    border: 1px solid #000000;
+
+    &:hover{
+      color: #000000;
+      border: 1px solid #000000;
+      background-color: #FFFFFF;
+    }
+  }
+
+  &.btn--c2{
+    &:hover{
+      color: #fff;
+    }
+  }
+
+  &.btn--c3{
+    &:hover{
+      color: #fff;
+    }
+  }
+}

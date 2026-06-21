@@ -1,0 +1,61 @@
+.message {
+  @include flex-direction( column);
+  border: 1px solid #fffD9B;
+  background-color: #ffffe9;
+  border-radius: 16px;
+  padding: 21px 27px 23px 29px;
+
+  &__heading {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: $color-accent-main;
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 13px;
+    color: #000;
+  }
+
+  &__form {
+    @include flex-direction( column);
+    gap: 12px;
+  }
+
+  &__form-personal {
+    @include flex-direction;
+    gap: 12px;
+
+    label {
+      width: calc(50% - 6px);
+    }
+  }
+
+  &__input {
+    max-width: 162px;
+    width: 100%;
+    border-radius: 5px;
+
+    @include media(sm2) {
+      max-width: unset;
+    }
+  }
+
+  &__textarea {
+    border-radius: 5px;
+    height: 138px;
+    resize: vertical;
+    padding: 1.1em;
+    font-size: 12px;
+  }
+
+  &__btn {
+    @include btn--default();
+    border-radius: 5px;
+    width: 183px;
+  }
+}

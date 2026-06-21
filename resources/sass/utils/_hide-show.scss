@@ -1,0 +1,41 @@
+.hide,
+.is-hidden{
+  display: none!important;
+}
+
+.show,
+.is-shown{
+  display: block!important;
+}
+
+.is-invisible{
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.is-visible{
+  visibility: visible;
+  height: initial;
+  overflow: unset;
+}
+
+$breakpoints-list: xs sm2 sm;
+
+@each $key in $breakpoints-list {
+
+  .#{$key}-hide {
+    @include media(#{$key}){
+      display: none!important;
+    }
+  }
+
+  .#{$key}-show{
+    @include media-up(#{$key}){
+      display: none!important;
+    }
+  }
+}
+

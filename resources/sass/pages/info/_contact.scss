@@ -1,0 +1,42 @@
+.contact {
+  @include flex-direction( column);
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    @include flex-direction();
+    background-color: $bg-section;
+    border: 1px solid $color-border-input;
+    align-items: center;
+    margin: 0;
+    gap: 15px;
+    padding: 25px 26px 21px;
+    border-radius: 9px;
+
+     i:before {
+      font-size: 20px;
+      color: #A2A2A2;
+    }
+  }
+
+  &__info {
+    padding: 15px 24px 15px 0;
+    border-right: 2px solid #CACACA;
+  }
+
+  &__title {
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: $font-weight-medium;
+    color: #242A34;
+  }
+
+  &__description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #6D757F;
+    margin: 0;
+  }
+}

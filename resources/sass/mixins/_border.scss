@@ -1,0 +1,19 @@
+$border: 1px solid $color-border;
+
+@mixin bordered {
+  outline: $border;
+}
+
+@mixin bordered-inner {
+  outline:1px solid rgba(0,0,0,0.075);
+  outline-offset: -1px;
+}
+
+@mixin border-dash($dash-color-1:transparen, $dash-color-2:$color-border, $dash-width:4px) {
+  border-image: repeating-linear-gradient( 45deg,
+  $dash-color-1,
+  $dash-color-1 $dash-width,
+  $dash-color-2 $dash-width,
+  $dash-color-2 2*$dash-width
+  , 1);
+}

@@ -1,0 +1,23 @@
+.formatted-text {
+
+  p, ul, ol, dl, figure, blockquote{
+    margin-bottom: 1.75em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    line-height: 1.2;
+    margin: 1.7rem 0 0.85rem;
+    padding: 0;
+    font-weight: 500;
+    @include media(xs){
+      margin: 1rem 0 0.5rem;
+    }
+  }
+
+  li > a, p > a{
+    text-decoration: none;
+    &:hover{
+    }
+  }
+}

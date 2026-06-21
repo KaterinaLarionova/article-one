@@ -1,0 +1,149 @@
+.article-detail {
+
+  &__wrap {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 40px;
+
+    @include media(md){
+      margin-bottom: 20px;
+    }
+  }
+
+  &__category {
+    color: $color-text-content;
+    background-color: #81D742;
+    border-radius: 2px;
+    padding: 4px 7px;
+    width: max-content;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    @include media(xs) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__information {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include media(sm2) {
+      flex-direction: column;
+      margin-bottom: 20px;
+      gap: 20px 12px;
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &-main {
+      display: flex;
+      gap: 25px;
+    }
+
+    &-title {
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    &-text {
+      color: #C7C7C7;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+
+  &__title {
+    color: #FFFEB0;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: -1.52px;
+    margin-top: 0;
+    margin-bottom: 14px;
+
+    @include media(sm2) {
+      font-size: 32px;
+    }
+
+    @include media(xs) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__brief {
+    color: $color-text-content;
+    @include double-font();
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    margin-bottom: 18px;
+
+    @include media(xs) {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+    position: relative;
+    margin-bottom: 45px;
+
+    .icon-chevron-right {
+      color: $color-main;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1;
+      position: absolute;
+      top: 17px;
+      right: 10px;
+    }
+
+    &:hover {
+      .icon-chevron-right {
+        color: $color-text-content;
+      }
+    }
+  }
+}
+
+.article-detail__body {
+  color: $color-text-content;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+
+  @include media(sm2) {
+    font-size: 16px;
+  }
+
+  @include media(xs) {
+    font-size: 15px;
+  }
+
+  h2, h3, h4 {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+
+    @include media(sm2){
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <meta name="keywords" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link href="assets/css/main.css" media="screen" rel="stylesheet"/>
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+</head>
+
+<body class="page-about page-info">
+<header class="header">
+    <div class="wrapper">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="header__categories category">
+                <a class="header__link category--orange" href="category.html">Health</a>
+                <a class="header__link category--blue" href="category.html">Auto</a>
+                <a class="header__link category--red" href="category.html">Shopping</a>
+                <a class="header__link category--green" href="category.html">Legal</a>
+                <a class="header__link category--teal" href="category.html">Travel</a>
+                <a class="header__link category--yellow" href="category.html">Finance</a>
+            </div>
+            <div class="header__search-bar">
+                <form class="search-bar" action="product.html">
+                    <input name="user_search" type="hidden" value="1">
+                    <input class="search-bar__input" id="input-focus"
+                           name=""
+                           placeholder="Search..."
+                           type="search"
+                           required
+                           value="">
+                    <button class="search-bar__btn" value="" type="submit"></button>
+                </form>
+                <div class="search-bar__icon__close" data-trigger="form-search"></div>
+            </div>
+            <div class="header__menu-burger">
+                <span id="iconMenuTrigger" class="header__icon-menu-burger"></span>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="page-info__wrapper">
+        <div class="page-info__header">
+            <a class="page-info__header-link" href="index.html">Home</a>
+            <i class="icon icon-chevron-right"></i>
+            <span class="page-info__header-name">About</span>
+        </div>
+        <div class="section">
+            <h2 class="page-about__heading">Who We Are</h2>
+            <p class="page-about__description">At FactNexia, we are a team of curious minds and passionate storytellers
+                dedicated to making knowledge
+                accessible, practical, and empowering. We believe that facts drive smarter decisions, so we craft
+                content
+                that
+                simplifies the complex and inspires confidence. Guided by clarity, honesty, and creativity, we bring
+                together
+                insights from diverse fields to help our readers stay informed, make better choices, and live with
+                purpose.</p>
+            <div class="page-about__image">
+                <img class="lazy loaded" src="assets/images/about.jpg" alt="">
+            </div>
+            <h3 class="page-info__heading">Our Mission</h3>
+            <p class="page-info__description page-about__description--mission">At FactNexia, our mission is to turn information into empowerment. We aim
+                to simplify complexity, share
+                reliable insights, and guide smarter decisions—helping people live with clarity, confidence, and purpose
+                in
+                every aspect of life.</p>
+        </div>
+    </div>
+    <div class="page-info__background section">
+        <div class="page-info__wrapper">
+            <h3 class="page-info__heading">Our Core Team</h3>
+            <p class="page-info__description">The heart of FactNexia is a diverse team of writers, editors, and creators
+                who
+                share one goal: making
+                knowledge clear, useful, and inspiring. With backgrounds in lifestyle, finance, storytelling, and
+                research,
+                our team brings unique perspectives together to deliver content you can trust. We value curiosity,
+                creativity, and honesty—because we believe the best insights come from collaboration and care.</p>
+            <ul class="page-info__team-list team-list">
+                <li class="team-list__card">
+                    <img class="team-list__card-image" src="assets/images/team-01.jpg" alt="Isabella Rossi">
+                    <div class="team-list__card-info">
+                        <span class="team-list__card-name"> Jordan Alvarez</span>
+                        <span class="team-list__card-position">Senior Writer</span>
+                    </div>
+                </li>
+                <li class="team-list__card">
+                    <img class="team-list-card__image" src="assets/images/team-02.jpg" alt="Isabella Rossi">
+                    <div class="team-list__card-info">
+                        <span class="team-list__card-name">Claire Morrison</span>
+                        <span class="team-list__card-position">Senior Writer</span>
+                    </div>
+                </li>
+                <li class="team-list__card">
+                    <img class="team-list__card-image" src="assets/images/team-03.jpg" alt="Isabella Rossi">
+                    <div class="team-list__card-info">
+                        <span class="team-list__card-name">Isabella Rossi</span>
+                        <span class="team-list__card-position">Junior Writer</span>
+                    </div>
+                </li>
+                <li class="team-list__card">
+                    <img class="team-item__card-image" src="assets/images/team-04.jpg" alt="Isabella Rossi">
+                    <div class="team-list__card-info">
+                        <span class="team-list__card-name">Noah Mitchell</span>
+                        <span class="team-list__card-position">Junior Writer</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-info__wrapper">
+        <h3 class="page-info__heading">Get in Touch</h3>
+        <p class="page-info__description">We’d love to hear from you! Whether you have a question, feedback, or just
+            want to say hello, our team is
+            here to help. Reach out to us anytime—we value our readers and look forward to connecting with you.</p>
+        <div class="page-info__inner">
+            <div class="page-info__massage message">
+                <h3 class="message__heading">Drop Us A Message</h3>
+                <p class="message__descr">Have A Question? Comments? Drop us a line.</p>
+                <form class="message__form" id="feedback-form">
+                    <div class="message__form-personal">
+                        <label>
+                            <input type="text" name="feedback[name]" class="message__input" placeholder="Name*">
+                        </label>
+                        <label>
+                            <input type="text" name="feedback[email]" class="message__input" placeholder="Email*">
+                        </label>
+                    </div>
+                    <textarea placeholder="Message*" name="feedback[body]" class="message__textarea"></textarea>
+                    <button type="submit" class="message__btn">Submit</button>
+                </form>
+            </div>
+            <ul class="page__info contact">
+                <li class="contact__item">
+                    <div class="contact__info">
+                        <i class="contact__icon icon icon-mail"></i>
+                    </div>
+                    <div class="contact__info-content">
+                        <h4 class="contact__title">E-Mail</h4>
+                        <p class="contact__description paragraph">contact@spocketgist.com</p>
+                    </div>
+                </li>
+                <li class="contact__item">
+                    <div class="contact__info">
+                        <i class="contact__icon icon icon-geo"></i>
+                    </div>
+                    <div class="contact__info-content">
+                        <h4 class="contact__title">Address</h4>
+                        <p class="contact__description paragraph">
+                            MediaQuest HQ Unit 1603, JBC 4<br>
+                            JLT, Cluster N Dubai,UEA
+                        </p>
+                    </div>
+                </li>
+                <li class="contact__item">
+                    <div class="contact__info">
+                        <i class="contact__icon icon icon-time"></i>
+                    </div>
+                    <div>
+                        <h4 class="contact__title">Opening Hours</h4>
+                        <p class="contact__description paragraph">
+                            Monday – Friday : 09:00 – 20:00<br>
+                            Sunday & Saturday: 10:30 – 22:00
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__wrapper">
+            <a class="footer__logo" href="index.html"><img src="assets/images/logo.svg" alt=""></a>
+            <div class="footer__copyright">Copyright © 2025 FactNexia.com. All rights reserved</div>
+            <div class="footer__links">
+                <a class="footer__link" href="about.html">About</a>
+                <a class="footer__link" href="contacts.html">Contact</a>
+                <a class="footer__link" href="privacy.html">Privacy</a>
+                <a class="footer__link" href="terms.html">T&Cs</a>
+                <a class="footer__link" href="cookies.html">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src='assets/js/main.js'></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+.wrapper {
+  width: $lg-bp;
+  margin: 0 auto;
+
+  @include media($md-bp + (20px * 2)) {
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  @include media(sm2) {
+    padding: 0 20px;
+  }
+
+  @include media(xs) {
+    padding: 0 10px;
+  }
+
+  &--xs {
+    width: 724px;
+
+    @include media(724px + (15px * 2)){
+      padding: 0 15px;
+      width: 100%;
+    }
+  }
+}
+
+/*@mixin layout-2col ($padding: 12.5px, $sidebar-width: 363px) {
+  display: flex;
+  flex-direction: row;
+  //align-items: stretch;
+  @include clear();
+  @include negative-margins($padding);
+
+  &__main {
+    float: left;
+    padding: 0 $padding;
+
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+
+  &__sidebar {
+    width: 375px;
+    float: left;
+
+    @include media(1200px) {
+      //padding-left: 20px;
+    }
+
+    @include media(sm) {
+      width: 100%;
+      //padding-left: 0;
+      //padding-top: 0;
+    }
+  }
+
+  &__right {
+    width: $sidebar-width;
+    float: right;
+    //padding: 0 $padding*0.5;
+
+    @include media(sm) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+}*/
+
+.layout-3col {
+  &__main {
+    width: calc(99.9% - (295px + 140px));
+    float: left;
+    padding: 0 44px;
+
+    @include media(sm) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__left {
+    width: 295px;
+    float: left;
+
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 140px;
+    float: right;
+
+    @include media(sm) {
+      width: 100%;
+    }
+  }
+}
+
+.layout-2col {
+  @include clear();
+
+  &__main {
+    width: calc(99.9% - 375px);
+    float: right;
+    padding-left: 40px;
+
+    @include media(1200px){
+      padding-left: 20px;
+    }
+    @include media(sm){
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  &__sidebar {
+    width: 375px;
+    float: left;
+
+    @include media(sm){
+      width: 100%;
+    }
+  }
+
+  &__right {
+    //display: flex;
+    //flex-direction: column;
+    width: 375px;
+    float: right;
+  }
+
+  &__left {
+    //display: flex;
+    //flex-direction: row;
+    width: calc(99.9% - 375px);
+    float: left;
+    padding-right: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 27px;
+  }
+
+}// layout-2col
+

@@ -1,0 +1,52 @@
+.page-about {
+  &__heading {
+    color: $color-title;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0 0 12px;
+    letter-spacing: -1.52px;
+
+    @include media(sm2) {
+      font-size: 32px;
+    }
+
+    @include media(xs) {
+      font-size: 26px;
+    }
+  }
+
+  &__description {
+    color: $color-title;
+    @include double-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 33px;
+
+    @include media(sm2) {
+      font-size: 15px;
+    }
+  }
+
+  &__description--mission {
+    margin-bottom: 0;
+  }
+
+  &__image {
+    @include aspect-ratio(2, 1);
+    margin-bottom: 54px;
+
+    @include media(sm2) {
+      margin-bottom: 30px;
+    }
+
+    img {
+      @include object-fit-cover();
+    }
+  }
+}

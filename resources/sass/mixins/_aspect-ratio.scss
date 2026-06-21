@@ -1,0 +1,48 @@
+@use "sass:math";
+// fixed aspect ratio container, ratio = width / height
+@mixin aspect-ratio($width, $height){
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding: math.div(100%, math.div($width, $height)) 0 0 0; // 100 / (w / h)
+    z-index: 1;
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    @include object-fit-cover;
+  }
+
+  //for videos
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin object-fit-cover{
+  object-fit: cover;
+  font-family: 'object-fit: cover', serif;
+}
+
+@mixin object-fit-contain{
+  object-fit:contain;
+  font-family: 'object-fit: contain', serif;
+}
+
+@mixin object-fit-scale-down{
+  object-fit:scale-down;
+  font-family: 'object-fit: scale-down', serif;
+}

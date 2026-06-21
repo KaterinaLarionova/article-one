@@ -1,0 +1,49 @@
+.related-search {
+  margin-bottom: 40px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    @include negative-margins(60px);
+
+    @include media(sm2) {
+      @include negative-margins(0);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(45% - 60px);
+    margin: 0 0 15px 60px;
+    padding: 10px 0;
+    background-color: transparent;
+    color: #000000;
+    font-size: 13px;
+    border-bottom: 1px solid #000000;
+    line-height: 16px;
+    text-decoration: none;
+    position: relative;
+
+    @include media(sm2) {
+      margin: 0 0 15px 20px;
+      width: 100%;
+    }
+
+    @include media(sm2) {
+      margin: 0 0 15px 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: initial;
+      border-bottom: 1px solid $color-link-h;
+    }
+  }
+
+  &__icon {
+    display: block;
+    color: #000000;
+  }
+}

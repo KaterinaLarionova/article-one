@@ -1,0 +1,66 @@
+// banners
+//---------------------------------------------------
+.bnr{
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+
+  .wrapper{
+    overflow: hidden;
+  }
+}
+
+.bnr,
+.bnr--sidebar{
+  margin-bottom: 1em;
+}
+
+.js-fit{
+  margin: 0 auto;
+}
+
+.bnr--local-result{
+  padding: 10px;
+  border-bottom: $border;
+  @include media(xs){
+    padding: 10px 0;
+  }
+}
+.emp-bnr{
+  text-align: center;
+  //   margin: 0.25em 0;
+  max-width: 100%;
+  overflow: auto;
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+
+  &--search{
+    border-bottom: none;
+    padding: 0.5em 0;
+    @include media(xs){
+      padding: 0;
+    }
+  }
+
+  &--product-detail,
+  &--local-detail{
+    margin: 0.25em 0 1.5em;
+  }
+
+  &--bottom{
+    margin: 0 0 1.5em;
+  }
+
+}//emp-bnr
+
+.adm-bnr,
+.afc-bnr {
+  padding-bottom: 0.75em;
+  text-align: center;
+}
+
+.page-product {
+  .adm-bnr {
+    margin-bottom: 1.25em
+  }
+}

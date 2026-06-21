@@ -1,0 +1,27 @@
+.clear{
+  @include clear;
+}
+
+.xs-clear {
+  @include media(xs){
+    margin-left: 0!important;
+    margin-right: 0!important;
+    @include clear;
+  }
+}
+.sm2-clear {
+  @include media(sm2){
+    margin-left: 0!important;
+    margin-right: 0!important;
+    @include clear;
+  }
+}
+
+.sm-clear {
+  @include media(sm){
+    margin-left: 0!important;
+    margin-right: 0!important;
+    @include clear;
+  }
+}
+

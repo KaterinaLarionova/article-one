@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="keywords" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link href="assets/css/main.css" media="screen" rel="stylesheet"/>
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+
+<body class="page-contact page-info">
+
+<header class="header">
+    <div class="wrapper wrapper--xs">
+        <div class="header__wrap">
+            <div class="header__logo-wrap">
+                <a class="header__logo header__logo--desktop" href="index.html">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+                <a class="header__logo header__logo--mobile" href="index.html">
+                    <img src="assets/images/logo-mobile.svg" alt="">
+                </a>
+            </div>
+            <div class="header__categories">
+                <a class="header__link" href="category.html">Health & Wellness</a>
+                <a class="header__link" href="category.html">Travel</a>
+                <a class="header__link" href="category.html">Guides</a>
+                <a class="header__link" href="category.html">Home & Living</a>
+                <a class="header__link" href="category.html">Beauty</a>
+            </div>
+            <div class="header__icons">
+                <div class="header__search">
+                    <span id="iconSearchTrigger" class="header__icon-search"></span>
+                </div>
+                <div class="header__menu-burger">
+                    <span id="iconMenuTrigger" class="header__icon-menu-burger"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="page-info__hero">
+    <div class="page-info__hero-inner"><h1>Contact Us</h1></div>
+</div>
+
+<div class="wrapper wrapper--xs">
+    <div class="page-info__intro">
+        <h2 class="page-info__heading">Connect With Us</h2>
+        <p class="page-info__description">We’d love to hear from you! Whether you have questions, feedback, or collaboration ideas, the team at PocketPathway.com is just a message away. Reach out and let’s connect—we’re here to listen, share, and grow together.</p>
+    </div>
+    <div class="contact-info">
+        <div class="contact-info__item">
+            <i class="contact-info__icon icon icon-mail"></i>
+            <div class="contact-info__content">
+                <h3 class="contact-info__title">E-Mail</h3>
+                <a class="contact-info__description" href="mailto:contact@spocketgist.com">contact@spocketgist.com</a>
+            </div>
+        </div>
+        <div class="contact-info__item">
+            <i class="contact-info__icon icon icon-geo"></i>
+            <div class="contact-info__content">
+                <h3 class="contact-info__title">Address</h3>
+                <p class="contact-info__description">
+                    Media Quest Group, 1603, JBC 4 JLT,<br>
+                    Cluster N, Dubai, UAE<br>
+                </p>
+            </div>
+        </div>
+        <div class="contact-info__item">
+            <i class="contact-info__icon icon icon-time"></i>
+            <div class="contact-info__content">
+                <h3 class="contact-info__title">Opening Hours</h3>
+                <p class="contact-info__description">
+                    Monday – Friday : 09:00 – 20:00<br>
+                    Sunday & Saturday: 10:30 – 22:00<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="page-contact__contact">
+        <div class="form-card form-feedback">
+            <h3 class="form-feedback__title">Drop Us A Message</h3>
+            <p class="form-feedback__descr">Have A Question? Comments? Drop us a line.</p>
+            <div id="feedback-error" style="display:none;">There was an error sending the message.</div>
+            <form class="form-feedback__form" id="feedback-form">
+                <input type="hidden">
+                <div class="form-feedback__personal">
+                    <input type="text" name="feedback[name]" class="form-feedback__input" placeholder="Name*">
+                    <input type="text" name="feedback[email]" class="form-feedback__input" placeholder="E-mail*">
+                </div>
+                <textarea placeholder="Message*" name="feedback[body]" class="form-feedback__tetxarea"></textarea>
+                <button type="submit" class="form-feedback__btn btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__wrapper">
+            <div class="footer__right">
+                <div class="footer__logo"><a href="index.html"><img src="assets/images/logo-footer.svg" alt=""></a></div>
+                <p class="footer__description">PocketPathway.com is your go-to lifestyle guide: sharing tips, stories, and ideas to help you live smarter, better, and with ease.</p>
+            </div>
+            <p class="footer__copyright">© 2025 Outside Interactive, Inc.</p>
+            <div class="footer__links">
+                <a class="footer__link paragraph paragraph--size-small" href="about.html">About</a>
+                <a class="footer__link paragraph paragraph--size-small" href="contacts.html">Contact</a>
+                <a class="footer__link paragraph paragraph--size-small" href="terms.html">Terms</a>
+                <a class="footer__link paragraph paragraph--size-small" href="privacy.html">Privacy Policy</a>
+                <a class="footer__link paragraph paragraph--size-small" href="cookies.html">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="menu-burger close">
+    <div class="menu-burger__wrap">
+        <div class="wrapper">
+            <div class="menu-burger__content">
+                <div class="menu-burger__categories">
+                    <div class="menu-burger__nav">
+                        <button type="button" class="menu-burger__btn paragraph showCategory" data-menu-nav-el="Fashion">
+                            Fashion
+                        </button>
+                        <button type="button" class="menu-burger__btn paragraph" data-menu-nav-el="Home">
+                            Home
+                        </button>
+                        <button type="button" class="menu-burger__btn paragraph" data-menu-nav-el="Health & Beauty">
+                            Health & Beauty
+                        </button>
+                        <button type="button" class="menu-burger__btn paragraph" data-menu-nav-el="Tech">
+                            Tech
+                        </button>
+                        <button type="button" class="menu-burger__btn paragraph" data-menu-nav-el="Travel">
+                            Travel
+                        </button>
+                        <button type="button" class="menu-burger__btn paragraph" data-menu-nav-el="Trending">
+                            Trending
+                        </button>
+                    </div>
+                    <div class="menu-burger__nav menu-burger__nav--mobile">
+                        <a href="category.html" class="menu-burger__btn paragraph">Fashion</a>
+                        <a href="category.html" class="menu-burger__btn paragraph">Home</a>
+                        <a href="category.html" class="menu-burger__btn paragraph">Health & Beauty</a>
+                        <a href="category.html" class="menu-burger__btn paragraph">Tech</a>
+                        <a href="category.html" class="menu-burger__btn paragraph">Travel</a>
+                        <a href="category.html" class="menu-burger__btn paragraph">Trending</a>
+                    </div>
+                </div>
+                <div class="menu-burger__articles">
+                    <h3 class="menu-burger__heading">Featured Articles</h3>
+                    <div data-menu-nav-section="Fashion" class="showCategory">
+                        <div class="menu-burger__list">
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-01.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Fashion</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Dyson’s New V12 Detect Slim Is the Brand’s Most Compact and Powerful Vacuum—And It’s
+                                            the
+                                            Only One I’ll Ever Need
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-02.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Fashion</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            The Ultimate Guide to Dermatologist-Approved Spray Sunscreen for Your Face
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-03.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Fashion</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Travelling soon? Here are the 16 Best Shoes for travelling According to a
+                                            Podiatrist’s
+                                            Top 3 Criteria
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div data-menu-nav-section="Home" class="closeCategory">
+                        <div class="menu-burger__list">
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-01.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Home</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Dyson’s New V12 Detect Slim Is the Brand’s Most Compact and Powerful Vacuum—And It’s
+                                            the
+                                            Only One I’ll Ever Need
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-02.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Home</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            The Ultimate Guide to Dermatologist-Approved Spray Sunscreen for Your Face
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-03.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Home</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Travelling soon? Here are the 16 Best Shoes for travelling According to a
+                                            Podiatrist’s
+                                            Top 3 Criteria
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div data-menu-nav-section="Health & Beauty" class="closeCategory">
+                        <div class="menu-burger__list">
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-01.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Health & Beauty</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Dyson’s New V12 Detect Slim Is the Brand’s Most Compact and Powerful Vacuum—And It’s
+                                            the
+                                            Only One I’ll Ever Need
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-02.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Health & Beauty</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            The Ultimate Guide to Dermatologist-Approved Spray Sunscreen for Your Face
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-03.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Health & Beauty</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Travelling soon? Here are the 16 Best Shoes for travelling According to a
+                                            Podiatrist’s
+                                            Top 3 Criteria
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div data-menu-nav-section="Tech" class="closeCategory">
+                        <div class="menu-burger__list">
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-01.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Tech</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Dyson’s New V12 Detect Slim Is the Brand’s Most Compact and Powerful Vacuum—And It’s
+                                            the
+                                            Only One I’ll Ever Need
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-02.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Tech</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            The Ultimate Guide to Dermatologist-Approved Spray Sunscreen for Your Face
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-03.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Tech</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Travelling soon? Here are the 16 Best Shoes for travelling According to a
+                                            Podiatrist’s
+                                            Top 3 Criteria
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div data-menu-nav-section="Travel" class="closeCategory">
+                        <div class="menu-burger__list">
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-01.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Travel</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Dyson’s New V12 Detect Slim Is the Brand’s Most Compact and Powerful Vacuum—And It’s
+                                            the
+                                            Only One I’ll Ever Need
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-02.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Travel</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            The Ultimate Guide to Dermatologist-Approved Spray Sunscreen for Your Face
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-03.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Travel</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Travelling soon? Here are the 16 Best Shoes for travelling According to a
+                                            Podiatrist’s
+                                            Top 3 Criteria
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div data-menu-nav-section="Trending" class="closeCategory">
+                        <div class="menu-burger__list">
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-01.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Trending</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Dyson’s New V12 Detect Slim Is the Brand’s Most Compact and Powerful Vacuum—And It’s
+                                            the
+                                            Only One I’ll Ever Need
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-02.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Trending</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            The Ultimate Guide to Dermatologist-Approved Spray Sunscreen for Your Face
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="article-media article-media--sm">
+                                <a class="article-media__link" href="article.html">
+                                    <img src="./assets/images/article-03.png" alt="">
+                                </a>
+                                <div class="article-media__body">
+                                    <span class="article-media__category">Trending</span>
+                                    <h3 class="article-media__title">
+                                        <a href="article.html">
+                                            Travelling soon? Here are the 16 Best Shoes for travelling According to a
+                                            Podiatrist’s
+                                            Top 3 Criteria
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='assets/js/main.js'></script>
+
+</body>
+</html>

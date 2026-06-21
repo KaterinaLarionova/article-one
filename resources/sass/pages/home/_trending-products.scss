@@ -1,0 +1,12 @@
+.trending-products {
+  text-align: center;
+  @include negative-margins(20px);
+
+  .product-card {
+    margin: 0 10px;
+  }
+
+  &__carousel {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,19 @@
+.search-web {
+
+  &__heading {
+    @include font-web();
+    color: #E5E5E5;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__header {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  &__heading {
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+}

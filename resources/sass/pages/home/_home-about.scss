@@ -1,0 +1,26 @@
+.home-about {
+  @include flex-direction($direction: column);
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 19px;
+
+  @include media(sm2) {
+    display: none;
+  }
+
+  &__description {
+    max-width: 854px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: $font-weight-semibold;
+    line-height: 2.2;
+    color: #000;
+
+    @include media(sm) {
+      font-size: 15px;
+      line-height: 1.9;
+    }
+  }
+}

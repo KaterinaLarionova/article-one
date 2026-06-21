@@ -1,0 +1,74 @@
+$cookies-bottom-color: darken($color-text, 5%);
+$cookies-bottom-background: darken($bg, 5%);
+$cookies-close-color: $color-text;
+
+
+.cookies-info {
+  line-height: 1.2;
+  display:none;
+  width: 100%;
+  z-index: 2;
+
+  a{
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+// Bottom position
+.cookies-info--bottom{
+  position:fixed;
+  bottom:0;
+  color: $cookies-bottom-color;
+  background: $cookies-bottom-background;
+  padding: 10px 5px;
+}
+
+.cookies-info__text {
+  padding-right: 24px;
+}
+
+.cookies-info--desk {
+  font-size: 12px;
+  @media(max-width:480px){
+    display: none;
+  }
+}
+
+.cookies-info--mob {
+  font-size: 12px;
+  display: none;
+  @media(max-width:480px){
+    display: block;
+  }
+}
+
+.cookies-info__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:before, &:after {
+    position: absolute;
+    left: 10px;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: $cookies-close-color;
+  }
+  &:before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  &:after {
+    -webkit-transform: rotate(-45deg);
+  }
+}

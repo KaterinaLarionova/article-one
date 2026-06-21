@@ -1,0 +1,71 @@
+
+// Inputs settings
+//------------------------------------------------------------
+$input-font-size: 12px!default;
+$input-height: 44px!default;
+$input-text-color: #606060!default;
+$input-bg-color: #fff!default;
+$input-border-color: $color-border!default;
+$input-border-focus-color: darken($input-border-color, 5%) !default;
+$input-border-radius: 5px!default;
+$input-placeholder-color: #767676!default;
+//------------------------------------------------------------
+
+$inputs-list:
+'input[type="text"]',
+'input[type="search"]',
+'input[type="number"]',
+'input[type="password"]',
+'input[type="email"]';
+
+#{$inputs-list},
+textarea,
+select{
+  color: $input-text-color;
+  font-size: $input-font-size;
+  background: $input-bg-color;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  -o-appearance:none;
+
+  &:focus{
+    border: 1px solid $input-border-focus-color;
+  }
+}
+
+#{$inputs-list},
+select {
+  height: $input-height;
+  line-height: $input-height;
+  padding: 0 1em;
+  width: 100%;
+}
+
+textarea {
+  padding:0.5em;
+}
+
+select{
+  background: $input-bg-color url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.51617 7.54801C4.95217 7.10201 5.55917 7.06701 6.09217 7.54801L10.0002 11.295L13.9082 7.54801C14.4412 7.06701 15.0492 7.10201 15.4822 7.54801C15.9182 7.99301 15.8902 8.74501 15.4822 9.16301C15.0762 9.58101 10.7872 13.665 10.7872 13.665C10.685 13.7709 10.5626 13.855 10.4272 13.9126C10.2919 13.9701 10.1463 13.9997 9.99917 13.9997C9.85208 13.9997 9.7065 13.9701 9.57111 13.9126C9.43572 13.855 9.31331 13.7709 9.21118 13.665C9.21118 13.665 4.92417 9.58101 4.51617 9.16301C4.10717 8.74501 4.08017 7.99301 4.51617 7.54801Z' fill='black'/%3E%3C/svg%3E%0A")  center right/calc(100% - 10px) no-repeat;
+  background-size: 18px;
+  padding-right: 20px;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+input::placeholder {
+color: $input-placeholder-color;
+}
+input::-webkit-input-placeholder {
+color: $input-placeholder-color;
+}
+input::-moz-placeholder {
+color: $input-placeholder-color;
+}
+input:-ms-input-placeholder {
+color: $input-placeholder-color;
+}

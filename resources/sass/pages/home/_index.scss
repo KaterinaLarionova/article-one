@@ -1,0 +1,31 @@
+.section--bg {
+  background-color: #0D0D82;
+  padding: 45px 0 70px 0;
+
+  @include media(sm2) {
+    padding: 25px 0 35px 0;
+  }
+
+  .articles-header__title {
+    color: #fff;
+  }
+}
+
+@import 'hero';
+
+.articles-header {
+
+  &__title {
+    display: flex;
+    font-size: 23px;
+    font-weight: $font-weight-semibold;
+    padding-bottom: 16px;
+    line-height: 1;
+    color: #0D0D82;
+    justify-content: center;
+
+    @include media(sm2) {
+      font-size: 21px;
+    }
+  }
+}
