@@ -1,6 +1,6 @@
 .page-about {
   &__heading {
-    color: $color-title;
+    //color: $color-title;
     font-weight: 700;
     font-size: 38px;
     line-height: 1.2;
@@ -18,7 +18,7 @@
   }
 
   &__description {
-    color: $color-title;
+    //color: $color-title;
     @include double-font;
     font-weight: 400;
     font-size: 20px;

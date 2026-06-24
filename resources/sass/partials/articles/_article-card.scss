@@ -25,7 +25,7 @@
   }
 
   &__title {
-    color: $color-title;
+    color: var(--text-color);
     margin-bottom: 12px;
     @include truncate-lines(1.2, 3);
 
@@ -78,7 +78,7 @@
     @include flex-direction;
     align-items: center;
     gap: 5px;
-    color: $color-date;
+    color: var(--color-date);
     font-size: 13px;
     line-height: 1.4;
 

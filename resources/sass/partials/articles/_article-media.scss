@@ -97,7 +97,7 @@
   }
 
   &__description {
-    color: $color-text;
+    color: var(--color-text);
     font-size: 16px;
     line-height: 1.6;
     font-weight: 400;
@@ -117,7 +117,7 @@
     @include flex-direction;
     align-items: center;
     gap: 5px;
-    color: $color-date;
+    color: var(--color-date);
     font-size: 13px;
     line-height: 1.4;
 
@@ -221,7 +221,7 @@
       @include flex-direction;
       align-items: center;
       gap: 5px;
-      color: $color-date;
+      color: var(--color-date);
       font-size: 13px;
       line-height: 1.4;
 

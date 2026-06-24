@@ -2,39 +2,12 @@
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
-  background: linear-gradient(88deg, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0.3) 88%);
-  backdrop-filter: blur(24px) saturate(220% - 250%);
-  -webkit-backdrop-filter: blur(24px) saturate(220% - 250%);
-  border: 2px solid rgba(255, 255, 255, .3);
-
-
-
-
-
-  //border: 1px solid rgba(26, 26, 30, 0.10);
-//background: linear-gradient(100deg, rgba(255, 255, 255, 0.3) 2%, rgba(255, 255, 255, 0.3) 88%);
-  //border: 1px solid rgba(255, 255, 255, .2);
-  //background-color: rgb(255, 255, 255);
-  //background: linear-gradient(100deg, rgba(255, 255, 255, 0.3) 2%, rgba(255, 255, 255, 0.3) 88%);
-  //background-color: #f4efef;
-  //backdrop-filter: blur(24px) saturate(1.35);
+  background: var(--bg-section);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
   padding: 2.5em;
   border-radius: 24px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-                    180deg,
-                    rgba(255, 255, 255, 0.35) 0%,
-                    rgba(255, 255, 255, 0) 35%
-    );
-
-    pointer-events: none;
-
-  }
 
   @include media(sm) {
     margin-bottom: 40px;
@@ -61,19 +34,14 @@
       content: "";
       display: block;
       height: 3px;
-      max-width: 64px;
+      max-width: 109px;
       width: 100%;
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(
-                      120deg,
-                      rgb(150, 236, 212) 0%,
-                      rgb(191, 240, 228) 25%,
-                      rgb(120, 170, 255) 80%,
+      background: linear-gradient(90deg, #9aa0db 72%, #dad9e9);
 
-      );
     }
   }
 

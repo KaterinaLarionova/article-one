@@ -3,12 +3,12 @@
 //------------------------------------------------------------
 $input-font-size: 12px!default;
 $input-height: 44px!default;
-$input-text-color: #606060!default;
+$input-text-color: var(--input-text)!default;
 $input-bg-color: #fff!default;
 $input-border-color: $color-border!default;
 $input-border-focus-color: darken($input-border-color, 5%) !default;
 $input-border-radius: 5px!default;
-$input-placeholder-color: #767676!default;
+$input-placeholder-color: var(--input-placeholder)!default;
 //------------------------------------------------------------
 
 $inputs-list:

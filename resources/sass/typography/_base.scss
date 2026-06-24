@@ -4,8 +4,8 @@ body {
   font-size: 16px;
   //line-height: 1.939;
   @include accent-font;
-  color: $color-text;
-  background: url("../images/bg-2.jpg") center top no-repeat;
+  color: var(--text-color);
+  background: var(--page-bg-image) center top no-repeat;
   background-size: cover;
   background-attachment: fixed;
 //background: linear-gradient(125deg, #c22ece 0%, #b257b0 32%, #ada678 63%, #c9d552 100%);
