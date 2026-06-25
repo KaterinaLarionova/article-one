@@ -196,3 +196,15 @@ i {
     content: $icon-home;
   }
 }
+
+.icon-sun {
+  &:before {
+    content: $icon-sun-o;
+  }
+}
+
+.icon-moon {
+  &:before {
+    content: $icon-moon-o;
+  }
+}

@@ -63,6 +63,10 @@ $palette: (
   --input-placeholder: #767676;
   --input-text: #606060;
 }
+
+:root.dark {
+  --page-bg-image: url("../images/bg-1.jpg");
+}
   // Main
   $bg: #dfe0e6;
   $bg-section: #FFFFFF;
@@ -127,9 +131,63 @@ $palette: (
 
 
 
+#theme-switcher {
+  background: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
 
 
+/* View Transition Styles */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
 
+::view-transition-old(root) {
+  z-index: 1;
+}
 
+::view-transition-new(root) {
+  z-index: 9999;
+  animation: circle-in 0.7s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark::view-transition-old(root) {
+  z-index: 9999;
+  animation: circle-out 0.7s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark::view-transition-new(root) {
+  z-index: 1;
+  animation: none;
+}
+
+@keyframes circle-in {
+  from {
+    clip-path: circle(0% at var(--click-x, 50%) var(--click-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--click-x, 50%) var(--click-y, 50%));
+  }
+}
+
+@keyframes circle-out {
+  from {
+    clip-path: circle(150% at var(--click-x, 50%) var(--click-y, 50%));
+  }
+  to {
+    clip-path: circle(0% at var(--click-x, 50%) var(--click-y, 50%));
+  }
+}
 
 
