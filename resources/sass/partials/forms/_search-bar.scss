@@ -78,7 +78,7 @@
     -webkit-appearance: none;
     padding: 0;
     //margin-right: 6px;
-    @include hover-focus-active;
+    @include link-hover;
 
     @include media(sm2) {
       padding: 0 1em 0 1em;

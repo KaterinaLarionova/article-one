@@ -1,9 +1,9 @@
-@mixin hover-focus-active ($bg-color: null, $color: null) {
+@mixin link-hover {
   &:hover,
   &:focus,
   &:active {
-    background-color: $bg-color;
-    color: $color;
+    //background-color: var(--text-color-light);
+    color: var(--link-hover);
     opacity: 0.7;
     transition: transform 0.3s ease-in;
   }

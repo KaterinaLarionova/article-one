@@ -29,13 +29,15 @@ $palette: (
   --text-color-light: #FFFFFF;
   --color-date: #A0A0A0;
   --text-muted: #999999;
+  --accent-color: #e91e63;
+  --link-hover: #e91e63;
 
   /*---- Page background----*/
-  --page-bg-image: url("../images/bg-2.jpg");
+  --page-bg-image: #cfd6ef;//#c9cfe6;#cfd6ef;
 
 
   /*----section---*/
-  --bg-section: rgba(255, 255, 255, 0.5);
+  --bg-section: rgba(255, 255, 255, 0.3);
   --glass-blur: blur(2.4px);
   --glass-bg: rgba(255, 255, 255, 0.5);
   --glass-border: 1px solid rgba(255, 255, 255, 0.63);
@@ -66,11 +68,22 @@ $palette: (
 
 :root.dark {
   --page-bg-image: url("../images/bg-1.jpg");
+  --text-color: #ffffff;
+  --text-color-light: #000000;
+
+  --bg-section: rgba(20, 20, 20, 0.7);
+  --glass-bg: rgba(20, 20, 20, 0.5);
+
+  --input-bg: rgba(255, 255, 255, 0.08);
+  --input-text: #ffffff;
+  --input-placeholder: #b5b5b5;
+
+  --border: #444;
 }
   // Main
   $bg: #dfe0e6;
   $bg-section: #FFFFFF;
-  $main-gradient: linear-gradient(180deg,rgba(0, 0, 0, 0.00) 23%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.5) 100%);
+  $main-gradient:linear-gradient(160deg, rgba(0, 0, 0, 0) 28%, rgba(0, 0, 0, 0.5) 79%, rgba(0, 0, 0, 0.5) 100%);
     //linear-gradient(168deg, rgb(228, 235, 251) 0%, rgb(233, 236, 246) 38%, rgb(239, 236, 245) 70%, rgb(246, 236, 241) 100%);
 
   $color-main: #112868;
@@ -133,8 +146,8 @@ $palette: (
 
 #theme-switcher {
   background: transparent;
-  border: 1px solid var(--text);
-  color: var(--text);
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
   padding: 8px;
   border-radius: 50%;
   cursor: pointer;

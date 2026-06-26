@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("theme-switcher");
 
   btn.addEventListener("click", (e) => {
@@ -16,4 +16,4 @@
       document.documentElement.classList.toggle("dark");
     });
   });
-});*/
+});

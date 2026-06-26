@@ -25,7 +25,7 @@
   }
 
   &__logo {
-    @include hover-focus-active;
+    @include link-hover;
   }
 
   &__right {
@@ -56,7 +56,7 @@
     line-height: 1.8;
     font-weight: $font-weight-regular;
     color: var(--text-color);
-    @include hover-focus-active;
+    @include link-hover;
   }
 
   &__logo {
